@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:gravity="center"
+                android:text="Cart"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:paddingEnd="5dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cart"
+                android:layout_marginStart="15dp"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        tools:ignore="MissingClass" />
+
+    <RelativeLayout
+        android:id="@+id/linearlayout2"
+       android:layout_below="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Price (2 items)"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹800.00"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/total"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Order"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+    </RelativeLayout>
+</RelativeLayout>
